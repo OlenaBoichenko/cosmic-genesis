@@ -130,7 +130,8 @@ export default function Quasar() {
     // Pulsate radiation cloud
     if (radiationRef.current) {
       const pulse = 0.8 + 0.2 * Math.sin(state.clock.elapsedTime * 2);
-      radiationRef.current.material.opacity = pulse * 0.3;
+      const material = radiationRef.current.material as THREE.PointsMaterial;
+      material.opacity = pulse * 0.3;
       radiationRef.current.rotation.y += 0.002;
       radiationRef.current.rotation.x += 0.001;
     }
@@ -160,21 +161,15 @@ export default function Quasar() {
         <bufferGeometry>
           <bufferAttribute
             attach="attributes-position"
-            count={diskParticles.positions.length / 3}
-            array={diskParticles.positions}
-            itemSize={3}
+            args={[diskParticles.positions, 3]}
           />
           <bufferAttribute
             attach="attributes-color"
-            count={diskParticles.colors.length / 3}
-            array={diskParticles.colors}
-            itemSize={3}
+            args={[diskParticles.colors, 3]}
           />
           <bufferAttribute
             attach="attributes-size"
-            count={diskParticles.sizes.length}
-            array={diskParticles.sizes}
-            itemSize={1}
+            args={[diskParticles.sizes, 1]}
           />
         </bufferGeometry>
         <pointsMaterial
@@ -193,21 +188,15 @@ export default function Quasar() {
         <bufferGeometry>
           <bufferAttribute
             attach="attributes-position"
-            count={jetParticles.positions.length / 3}
-            array={jetParticles.positions}
-            itemSize={3}
+            args={[jetParticles.positions, 3]}
           />
           <bufferAttribute
             attach="attributes-color"
-            count={jetParticles.colors.length / 3}
-            array={jetParticles.colors}
-            itemSize={3}
+            args={[jetParticles.colors, 3]}
           />
           <bufferAttribute
             attach="attributes-size"
-            count={jetParticles.sizes.length}
-            array={jetParticles.sizes}
-            itemSize={1}
+            args={[jetParticles.sizes, 1]}
           />
         </bufferGeometry>
         <pointsMaterial
@@ -226,21 +215,15 @@ export default function Quasar() {
         <bufferGeometry>
           <bufferAttribute
             attach="attributes-position"
-            count={jetParticles.positions.length / 3}
-            array={new Float32Array(jetParticles.positions)}
-            itemSize={3}
+            args={[new Float32Array(jetParticles.positions), 3]}
           />
           <bufferAttribute
             attach="attributes-color"
-            count={jetParticles.colors.length / 3}
-            array={new Float32Array(jetParticles.colors)}
-            itemSize={3}
+            args={[new Float32Array(jetParticles.colors), 3]}
           />
           <bufferAttribute
             attach="attributes-size"
-            count={jetParticles.sizes.length}
-            array={new Float32Array(jetParticles.sizes)}
-            itemSize={1}
+            args={[new Float32Array(jetParticles.sizes), 1]}
           />
         </bufferGeometry>
         <pointsMaterial
@@ -259,21 +242,15 @@ export default function Quasar() {
         <bufferGeometry>
           <bufferAttribute
             attach="attributes-position"
-            count={radiationParticles.positions.length / 3}
-            array={radiationParticles.positions}
-            itemSize={3}
+            args={[radiationParticles.positions, 3]}
           />
           <bufferAttribute
             attach="attributes-color"
-            count={radiationParticles.colors.length / 3}
-            array={radiationParticles.colors}
-            itemSize={3}
+            args={[radiationParticles.colors, 3]}
           />
           <bufferAttribute
             attach="attributes-size"
-            count={radiationParticles.sizes.length}
-            array={radiationParticles.sizes}
-            itemSize={1}
+            args={[radiationParticles.sizes, 1]}
           />
         </bufferGeometry>
         <pointsMaterial

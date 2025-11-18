@@ -111,21 +111,15 @@ export default function BlackHole() {
         <bufferGeometry>
           <bufferAttribute
             attach="attributes-position"
-            count={accretionParticles.positions.length / 3}
-            array={accretionParticles.positions}
-            itemSize={3}
+            args={[accretionParticles.positions, 3]}
           />
           <bufferAttribute
             attach="attributes-color"
-            count={accretionParticles.colors.length / 3}
-            array={accretionParticles.colors}
-            itemSize={3}
+            args={[accretionParticles.colors, 3]}
           />
           <bufferAttribute
             attach="attributes-size"
-            count={accretionParticles.sizes.length}
-            array={accretionParticles.sizes}
-            itemSize={1}
+            args={[accretionParticles.sizes, 1]}
           />
         </bufferGeometry>
         <pointsMaterial
