@@ -22,19 +22,19 @@ export default function BlackHoleScene() {
 
       {/* Text Content*/}
       <div className="content-overlay">
-        <div className="flex items-center justify-start min-h-screen px-8">
+        <div className="flex items-end md:items-center justify-start min-h-screen px-3 md:px-8 pb-8 md:pb-0 pt-24 md:pt-0">
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.5, delay: 0.3 }}
-            className="max-w-xl"
+            className="max-w-xl w-full"
           >
             <TextPanel>
               <motion.h1
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.5, delay: 0.5 }}
-                className="text-6xl md:text-7xl font-bold text-cosmic mb-6"
+                className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-cosmic mb-2 md:mb-6"
               >
                 BLACK HOLE
               </motion.h1>
@@ -43,24 +43,21 @@ export default function BlackHoleScene() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.5, delay: 1 }}
-                className="text-xl md:text-2xl text-cyan-200 font-light tracking-widest mb-8"
+                className="text-sm sm:text-xl md:text-2xl text-cyan-200 font-light tracking-widest mb-3 md:mb-8"
               >
-                GRAVITY'S ULTIMATE TRIUMPH
+                GRAVITY'S TRIUMPH
               </motion.p>
 
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.5, delay: 1.3 }}
-                className="text-base text-cyan-100/90 tracking-wide mb-10 leading-relaxed"
+                className="text-xs sm:text-sm md:text-base text-cyan-100/90 tracking-wide mb-4 md:mb-10 leading-relaxed hidden sm:block"
               >
                 <p>
                   A point of infinite density warps spacetime itself.
-                  <br />
+                  <br className="hidden md:block" />
                   Light bends around the event horizon, unable to escape.
-                  <br />
-                  Matter spirals inward, heating to millions of degrees before
-                  vanishing forever.
                 </p>
               </motion.div>
 
@@ -69,27 +66,27 @@ export default function BlackHoleScene() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 2, delay: 1.8 }}
-                className="grid grid-cols-3 gap-6 mb-6"
+                className="grid grid-cols-3 gap-2 md:gap-6 mb-3 md:mb-6"
               >
-                <div className="text-center bg-black/40 rounded-lg p-4 backdrop-blur-sm border border-cyan-400/20">
-                  <div className="text-3xl font-bold text-cosmic mb-2">
+                <div className="text-center bg-black/40 rounded-lg p-2 md:p-4 backdrop-blur-sm border border-cyan-400/20">
+                  <div className="text-lg sm:text-2xl md:text-3xl font-bold text-cosmic mb-0.5 md:mb-2">
                     10⁶ M☉
                   </div>
-                  <div className="text-sm text-cyan-200/80 tracking-wider">
-                    SOLAR MASSES
+                  <div className="text-[10px] sm:text-xs md:text-sm text-cyan-200/80 tracking-wider">
+                    MASS
                   </div>
                 </div>
-                <div className="text-center bg-black/40 rounded-lg p-4 backdrop-blur-sm border border-cyan-400/20">
-                  <div className="text-3xl font-bold text-cosmic mb-2">
+                <div className="text-center bg-black/40 rounded-lg p-2 md:p-4 backdrop-blur-sm border border-cyan-400/20">
+                  <div className="text-lg sm:text-2xl md:text-3xl font-bold text-cosmic mb-0.5 md:mb-2">
                     10⁷ °K
                   </div>
-                  <div className="text-sm text-cyan-200/80 tracking-wider">
-                    DISK TEMP
+                  <div className="text-[10px] sm:text-xs md:text-sm text-cyan-200/80 tracking-wider">
+                    TEMP
                   </div>
                 </div>
-                <div className="text-center bg-black/40 rounded-lg p-4 backdrop-blur-sm border border-cyan-400/20">
-                  <div className="text-3xl font-bold text-cosmic mb-2">∞</div>
-                  <div className="text-sm text-cyan-200/80 tracking-wider">
+                <div className="text-center bg-black/40 rounded-lg p-2 md:p-4 backdrop-blur-sm border border-cyan-400/20">
+                  <div className="text-lg sm:text-2xl md:text-3xl font-bold text-cosmic mb-0.5 md:mb-2">∞</div>
+                  <div className="text-[10px] sm:text-xs md:text-sm text-cyan-200/80 tracking-wider">
                     DENSITY
                   </div>
                 </div>
@@ -100,19 +97,16 @@ export default function BlackHoleScene() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 2, delay: 2.2 }}
-                className="bg-black/40 rounded-lg p-4 backdrop-blur-sm border border-cyan-400/20 space-y-2"
+                className="bg-black/40 rounded-lg p-2 md:p-4 backdrop-blur-sm border border-cyan-400/20 space-y-1 md:space-y-2 hidden sm:block"
               >
-                <p className="text-cyan-200 text-sm">
-                  <span className="font-semibold">Event Horizon:</span> Point of
-                  no return
+                <p className="text-cyan-200 text-[10px] sm:text-xs md:text-sm">
+                  <span className="font-semibold">Event Horizon:</span> Point of no return
                 </p>
-                <p className="text-cyan-200 text-sm">
-                  <span className="font-semibold">Photon Sphere:</span> Light
-                  orbits the black hole
+                <p className="text-cyan-200 text-[10px] sm:text-xs md:text-sm hidden md:block">
+                  <span className="font-semibold">Photon Sphere:</span> Light orbits
                 </p>
-                <p className="text-cyan-200 text-sm">
-                  <span className="font-semibold">Gravitational Lensing:</span>{" "}
-                  Spacetime curvature bends light
+                <p className="text-cyan-200 text-[10px] sm:text-xs md:text-sm hidden md:block">
+                  <span className="font-semibold">Lensing:</span> Spacetime curvature
                 </p>
               </motion.div>
             </TextPanel>

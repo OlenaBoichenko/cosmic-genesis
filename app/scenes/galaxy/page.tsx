@@ -37,19 +37,19 @@ export default function GalaxyScene() {
 
       {/* Text Content*/}
       <div className="content-overlay">
-        <div className="flex items-center justify-start min-h-screen px-8">
+        <div className="flex items-end md:items-center justify-start min-h-screen px-3 md:px-8 pb-8 md:pb-0 pt-24 md:pt-0">
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.5, delay: 0.3 }}
-            className="max-w-xl"
+            className="max-w-xl w-full"
           >
             <TextPanel>
               <motion.h1
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.5, delay: 0.5 }}
-                className="text-6xl md:text-7xl font-bold text-cosmic mb-6"
+                className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-cosmic mb-2 md:mb-6"
               >
                 GALAXY
               </motion.h1>
@@ -58,7 +58,7 @@ export default function GalaxyScene() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.5, delay: 1 }}
-                className="text-xl md:text-2xl text-cyan-200 font-light tracking-widest mb-8"
+                className="text-sm sm:text-xl md:text-2xl text-cyan-200 font-light tracking-widest mb-3 md:mb-8"
               >
                 SPIRAL OF CREATION
               </motion.p>
@@ -67,14 +67,12 @@ export default function GalaxyScene() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.5, delay: 1.3 }}
-                className="text-base text-cyan-100/90 tracking-wide mb-10 leading-relaxed"
+                className="text-xs sm:text-sm md:text-base text-cyan-100/90 tracking-wide mb-4 md:mb-10 leading-relaxed hidden sm:block"
               >
                 <p>
                   Billions of stars dance in a cosmic ballet.
-                  <br />
+                  <br className="hidden md:block" />
                   A supermassive black hole anchors them all.
-                  <br />
-                  Each point of light - a sun, perhaps with worlds of its own.
                 </p>
               </motion.div>
 
@@ -83,24 +81,24 @@ export default function GalaxyScene() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 2, delay: 1.8 }}
-                className="grid grid-cols-3 gap-6 mb-6"
+                className="grid grid-cols-3 gap-2 md:gap-6 mb-3 md:mb-6"
               >
-                <div className="text-center bg-black/40 rounded-lg p-4 backdrop-blur-sm border border-cyan-400/20">
-                  <div className="text-3xl font-bold text-cosmic mb-2">20,000</div>
-                  <div className="text-sm text-cyan-200/80 tracking-wider">
-                    VISIBLE STARS
+                <div className="text-center bg-black/40 rounded-lg p-2 md:p-4 backdrop-blur-sm border border-cyan-400/20">
+                  <div className="text-lg sm:text-2xl md:text-3xl font-bold text-cosmic mb-0.5 md:mb-2">20K</div>
+                  <div className="text-[10px] sm:text-xs md:text-sm text-cyan-200/80 tracking-wider">
+                    STARS
                   </div>
                 </div>
-                <div className="text-center bg-black/40 rounded-lg p-4 backdrop-blur-sm border border-cyan-400/20">
-                  <div className="text-3xl font-bold text-cosmic mb-2">100K</div>
-                  <div className="text-sm text-cyan-200/80 tracking-wider">
-                    LIGHT YEARS
+                <div className="text-center bg-black/40 rounded-lg p-2 md:p-4 backdrop-blur-sm border border-cyan-400/20">
+                  <div className="text-lg sm:text-2xl md:text-3xl font-bold text-cosmic mb-0.5 md:mb-2">100K</div>
+                  <div className="text-[10px] sm:text-xs md:text-sm text-cyan-200/80 tracking-wider">
+                    LY
                   </div>
                 </div>
-                <div className="text-center bg-black/40 rounded-lg p-4 backdrop-blur-sm border border-cyan-400/20">
-                  <div className="text-3xl font-bold text-cosmic mb-2">∞</div>
-                  <div className="text-sm text-cyan-200/80 tracking-wider">
-                    POSSIBILITIES
+                <div className="text-center bg-black/40 rounded-lg p-2 md:p-4 backdrop-blur-sm border border-cyan-400/20">
+                  <div className="text-lg sm:text-2xl md:text-3xl font-bold text-cosmic mb-0.5 md:mb-2">∞</div>
+                  <div className="text-[10px] sm:text-xs md:text-sm text-cyan-200/80 tracking-wider">
+                    WORLDS
                   </div>
                 </div>
               </motion.div>
@@ -110,7 +108,7 @@ export default function GalaxyScene() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 2, delay: 2.2 }}
-                className="text-center text-cyan-300/70 text-sm italic"
+                className="text-center text-cyan-300/70 text-[10px] sm:text-xs md:text-sm italic hidden sm:block"
               >
                 <p>"We are made of star-stuff" — Carl Sagan</p>
               </motion.div>

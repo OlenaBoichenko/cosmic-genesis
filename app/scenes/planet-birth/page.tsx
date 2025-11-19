@@ -61,19 +61,19 @@ export default function PlanetBirth() {
 
       {/* Text Content*/}
       <div className="content-overlay">
-        <div className="flex items-center justify-start min-h-screen px-8">
+        <div className="flex items-end md:items-center justify-start min-h-screen px-3 md:px-8 pb-8 md:pb-0 pt-24 md:pt-0">
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.5, delay: 0.3 }}
-            className="max-w-xl"
+            className="max-w-xl w-full"
           >
             <TextPanel>
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5, delay: 0.5 }}
-                className="text-6xl md:text-7xl font-bold text-supernova mb-6"
+                className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-supernova mb-2 md:mb-6"
               >
                 PLANET BIRTH
               </motion.h1>
@@ -82,7 +82,7 @@ export default function PlanetBirth() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.5, delay: 1 }}
-                className="text-xl md:text-2xl text-orange-200 font-light tracking-widest mb-8"
+                className="text-sm sm:text-xl md:text-2xl text-orange-200 font-light tracking-widest mb-3 md:mb-8"
               >
                 ACCRETION & FORMATION
               </motion.p>
@@ -91,14 +91,12 @@ export default function PlanetBirth() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.5, delay: 1.3 }}
-                className="text-base text-orange-100/90 tracking-wide mb-10 leading-relaxed"
+                className="text-xs sm:text-sm md:text-base text-orange-100/90 tracking-wide mb-4 md:mb-10 leading-relaxed hidden sm:block"
               >
                 <p>
                   A molten world forms from colliding asteroids and cosmic debris.
-                  <br />
+                  <br className="hidden md:block" />
                   The heat of formation glows like a newborn star.
-                  <br />
-                  Millions of years compressed into a single moment.
                 </p>
               </motion.div>
 
@@ -107,12 +105,16 @@ export default function PlanetBirth() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 2, delay: 1.8 }}
-                className="bg-black/40 rounded-lg p-4 backdrop-blur-sm border border-orange-400/20"
+                className="bg-black/40 rounded-lg p-2 md:p-4 backdrop-blur-sm border border-orange-400/20"
               >
-                <p className="text-orange-200 text-sm tracking-wider">
-                  <span className="font-semibold">Temperature:</span> 2,500°K •{" "}
-                  <span className="font-semibold">Mass:</span> 0.8 Earth •{" "}
-                  <span className="font-semibold">Age:</span> 10 Million Years
+                <p className="text-orange-200 text-[10px] sm:text-xs md:text-sm tracking-wider">
+                  <span className="font-semibold">Temp:</span> 2,500°K
+                  <span className="hidden sm:inline"> • </span>
+                  <br className="sm:hidden" />
+                  <span className="font-semibold">Mass:</span> 0.8 Earth
+                  <span className="hidden sm:inline"> • </span>
+                  <br className="sm:hidden" />
+                  <span className="font-semibold">Age:</span> 10M Years
                 </p>
               </motion.div>
             </TextPanel>
